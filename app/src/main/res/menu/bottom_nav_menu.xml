@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+            android:id="@+id/scheduleFragment"
+            android:icon="@drawable/ic_search_black_24dp"
+            android:title="@string/schedule"/>
+
+    <item
+            android:id="@+id/onlineBoardFragment"
+            android:icon="@drawable/ic_date_range_black_24dp"
+            android:title="@string/online_board"/>
+
+    <item
+            android:id="@+id/profileFragment"
+            android:icon="@drawable/ic_ticket"
+            android:title="@string/tickets"/>
+
+</menu>

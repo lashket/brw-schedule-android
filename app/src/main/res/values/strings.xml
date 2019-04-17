@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">БЖД</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="schedule">Расписание</string>
+    <string name="online_board">Онлайн табло</string>
+    <string name="profile">Профиль</string>
+    <string name="destination_station">Станция прибытия</string>
+    <string name="departure_station">Станция отправления</string>
+    <string name="departure_date">Дата отправления</string>
+    <string name="search">Искать</string>
+    <string name="arrive">Прибытие</string>
+    <string name="departure">Отправление</string>
+    <string name="platform">Платформа</string>
+    <string name="way">Путь</string>
+    <string name="wagon_type">Тип вагона</string>
+    <string name="seats_count">Количество</string>
+    <string name="ticket_price">Стоимость(р)</string>
+    <string name="tickets"> Мои билеты</string>
+    <string name="ticket_added_to_db">Билет успешно добавлен</string>
+    <string name="ticket_not_added_to_db">Билет не добавлен</string>
+    <string name="delete_btn_text">удалить</string>
+</resources>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/scheduleFragment">
+
+    <fragment
+        android:id="@+id/onlineBoardFragment"
+        android:name="by.railway.schedule.screens.board.OnlineBoardFragment"
+        android:label="OnlineBoardFragment" />
+    <fragment
+        android:id="@+id/scheduleFragment"
+        android:name="by.railway.schedule.screens.schedule.ScheduleFragment"
+        android:label="ScheduleFragment">
+        <action
+            android:id="@+id/action_scheduleFragment_to_searchResultsFragment"
+            app:destination="@+id/searchResultsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/nav_default_enter_anim"
+            app:popExitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="by.railway.schedule.screens.tickets.TicketsFragment"
+        android:label="ProfileFragment" />
+    <fragment
+        android:id="@+id/searchResultsFragment"
+        android:name="by.railway.schedule.screens.schedule.results.SearchResultsFragment"
+        android:label="SearchResultsFragment">
+        <argument
+            android:name="arriveStation"
+            app:argType="by.railway.schedule.domain.models.Station" />
+        <argument
+            android:name="destinationStation"
+            app:argType="by.railway.schedule.domain.models.Station" />
+        <argument
+            android:name="arriveTime"
+            app:argType="string" />
+    </fragment>
+</navigation>

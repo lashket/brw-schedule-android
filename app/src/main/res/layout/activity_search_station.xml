@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:visibility="visible">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_of_header">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            android:minHeight="60dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <RelativeLayout
+                app:layout_collapseMode="pin"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_of_header"
+                android:background="@drawable/bg_gradient_header">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/et_search_query"
+                        android:layout_width="match_parent"
+                        android:background="@drawable/bg_search_input"
+                        android:layout_marginTop="8dp"
+                        android:layout_height="44dp"
+                        android:layout_marginBottom="8dp"
+                        android:textColorHint="@color/input_hint_color"
+                        android:fontFamily="sans-serif-medium"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        android:imeOptions="actionSearch"
+                        android:inputType="text"
+                        android:lines="1"
+                        android:hint="Поиск"
+                        android:textColor="@color/accent_text_color"
+                        android:textSize="20sp" />
+                </LinearLayout>
+            </RelativeLayout>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        tools:listitem="@layout/item_station_search"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
